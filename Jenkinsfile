@@ -23,7 +23,7 @@ stages {
                 sh '''
                  ./remove_container_if_exists.sh cast_service
                  ./remove_container_if_exists.sh cast_db
-                 docker build -t $DOCKER_ID/$DOCKER_IMAGE:$DOCKER_TAG cast-servicee
+                 docker build -t $DOCKER_ID/$DOCKER_IMAGE:$DOCKER_TAG cast-service
                 sleep 6
                 '''
                 }
