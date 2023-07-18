@@ -150,7 +150,7 @@ stage('Deploiement en QA'){
 
                 script {
                 sh '''
-                rm -Rf .kube
+                rm -Rf .kube 
                 mkdir .kube
                 ls
                 cat $KUBECONFIG > .kube/config
