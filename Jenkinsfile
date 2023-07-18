@@ -154,7 +154,7 @@ stage('Deploiement en QA'){
                 mkdir .kube
                 ls
                 cat $KUBECONFIG > .kube/config
-                cp microservices/values.yaml values.yml
+                cp cast-service-helm/values.yaml values.yml
                 cat values.yml
                 sed -i "s+tag.*+tag: ${DOCKER_TAG}+g" values.yml
                 helm upgrade --install cast-service cast-service-helm --values=values.yml --namespace prod
