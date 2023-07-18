@@ -149,7 +149,7 @@ stage('Deploiement en QA'){
                     }
 
                 script {
-                sh '''
+                sh ''' 
                 rm -Rf .kube 
                 mkdir .kube
                 ls
